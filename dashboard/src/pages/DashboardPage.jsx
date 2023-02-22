@@ -64,7 +64,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="bg-gray-900 h-screen w-screen justify-center align-middle flex flex-col space-y-10">
+    <div className="flex flex-col justify-center w-screen h-screen space-y-10 align-middle bg-gray-900">
        
       <div className="w-3/2">
         <Tabs handleIntervalChange={handleIntervalChange} tabs={tabs} />

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const AssetPage = React.lazy(() => import("asset/AssetPage"));
 // import Dashboard from 'dashboard/Dashboard'
 // import Tabs from 'dashboard/Tabs'
-const Dummy = React.lazy(() => import("dashboard/Dummy"));
+const DashboardPage = React.lazy(() => import("dashboard/DashboardPage"));
 export default function ReactRouting() {
   const router = createBrowserRouter([
     {
@@ -12,7 +12,7 @@ export default function ReactRouting() {
     },
     {
       path: "/dashboard",
-      element: <Dummy/>,
+      element: <DashboardPage />,
     },
   ]);
   return (
