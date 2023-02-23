@@ -44,7 +44,7 @@ module.exports = {
       name: "asset",
       filename: "remoteEntry.js",
       remotes: {
-        home: "home@http://localhost:8080/remoteEntry.js",
+        home: "home@http://localhost:3000/remoteEntry.js",
         asset: "asset@http://localhost:3001/remoteEntry.js",
         dashboard: "dashboard@http://localhost:3002/remoteEntry.js",
       

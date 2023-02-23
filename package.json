@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:mock-api": "json-server --watch db.json",
+    "start:mock-api": "json-server --watch -p 3333 db.json",
     "start-all": "concurrently \"cd asset && npm start\" \"cd home && npm start\" \"cd dashboard && npm start\"",
     "install-all": "concurrently \"cd asset && npm install\" \"cd home && npm install\" \"cd dashboard && npm install\""
   },
