@@ -8,10 +8,10 @@ export default function AssetPage() {
   }, []);
 
   return (
-    <div className="py-24 bg-gray-900 sm:py-32">
+    <div className="py-24 bg-yellow-100 sm:py-32">
       <div className="px-6 mx-auto text-center max-w-7xl lg:px-8">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
             Asset
           </h2>
          
