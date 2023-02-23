@@ -12,6 +12,6 @@ Note:
     I used three microfrontend apps 
        1. home - http:localhost:3000 => In the home app I mounted the asset app and dashboard app based on the routing url it will render 
        2. asset - http:localhost:3001 => It will work separately
-       3. dashboard -http:localhost:3000 => Same here too it will work separately
+       3. dashboard -http:localhost:3002 => Same here too it will work separately
 
 
