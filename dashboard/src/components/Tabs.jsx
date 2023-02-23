@@ -1,12 +1,14 @@
 import React from "react";
 
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabs({ handleIntervalChange = () => {} ,tabs=[],interval=''}) {
+export default function Tabs({
+  handleIntervalChange = () => {},
+  tabs = [],
+  interval = "",
+}) {
   return (
     <div>
       <div className="sm:hidden">
@@ -17,24 +19,26 @@ export default function Tabs({ handleIntervalChange = () => {} ,tabs=[],interval
         <select
           id="tabs"
           name="tabs"
-         
+          onChange={(e) => handleIntervalChange(e.target.value)}
           className="border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500"
           defaultValue={tabs.find((tab) => tab.current).name}
         >
           {tabs.map((tab) => (
-            <option key={tab.name}>{tab.name}</option>
+            <option value={tab.name} key={tab.name}>
+              {tab.name}
+            </option>
           ))}
         </select>
       </div>
       <div className="hidden sm:block">
         <nav
-          className="flex w-1/2 ml-16 divide-x divide-gray-200 rounded-lg shadow isolate"
+          className="flex w-2/3 ml-16 divide-x divide-gray-200 rounded-lg shadow isolate"
           aria-label="Tabs"
         >
           {tabs.map((tab, tabIdx) => (
             <div
               key={tab.name}
-              onClick={()=>handleIntervalChange(tab.name)}
+              onClick={() => handleIntervalChange(tab.name)}
               className={classNames(
                 tab.current
                   ? "text-gray-900"
@@ -43,7 +47,6 @@ export default function Tabs({ handleIntervalChange = () => {} ,tabs=[],interval
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
                 "group relative min-w-0 flex-1 cursor-pointer overflow-hidden bg-white py-4 px-4 text-sm font-medium text-center hover:bg-gray-50 focus:z-10"
               )}
-              aria-current={tab.current ? "page" : undefined}
             >
               <span>{tab.name}</span>
               <span
