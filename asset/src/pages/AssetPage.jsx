@@ -4,7 +4,7 @@ import AssetCard from "../components/AssetCard";
 export default function AssetPage() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetchAPI().then((res) => setData(res.data));
+    fetchAPI().then((res) => setData(res.data)); // fetch the data and maping the assets
   }, []);
 
   return (
@@ -18,11 +18,13 @@ export default function AssetPage() {
         </div>
         <ul
           role="list"
-          className="grid max-w-2xl grid-cols-1 gap-6 mx-auto mt-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
+          className="grid max-w-2xl grid-cols-1 gap-6 mx-auto mt-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:gap-8"
         >
+
+          {/*  maping the asset componets */}
           {data.map((value, index) => (
             <div key={index}>
-              <AssetCard value={value} />
+              <AssetCard value={value} />  
             </div>
           ))}
         </ul>

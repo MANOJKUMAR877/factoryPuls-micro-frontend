@@ -6,11 +6,12 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
- 
   ResponsiveContainer,
 } from "recharts";
-
-const TrendChart = ({ aggregatedData = [] }) => {
+// rendering of trenc chart x as aggregation and y as product
+const TrendChart = ({
+  aggregatedData = [{ date: "2023.01.01", aggregation: 1, product: 1 }],
+}) => {
   return (
     <>
       <div className="">

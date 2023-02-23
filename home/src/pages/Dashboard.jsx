@@ -24,13 +24,11 @@ export default function Dashboard() {
 
   const [interval, setInterval] = useState("1 year");
   const [aggregatedData, setAggregatedData] = useState(data);
-
+// in this function based on their interval the function is managing the data
   const handleIntervalChange = (newInterval) => {
     setInterval(newInterval);
     if (newInterval === "1 year") {
       setAggregatedData(data);
-    } else if (newInterval === "1 month") {
-      return data;
     } else if (newInterval === "3 months") {
       // group data by quarters
       const quarters = {};
@@ -71,14 +69,14 @@ export default function Dashboard() {
   };
   return (
     <div className="flex flex-col justify-center h-screen bg-gray-900">
-      <div className="">
-        <Tabs
-          handleIntervalChange={handleIntervalChange}
-          tabs={tabs}
-          interval={interval}
-        />
-        <TrendChart aggregatedData={aggregatedData} />
-      </div>
+      {/* here both the  Tabs and Trendchart are indivual apps based on their the props they are rendering dynamic */}
+      <Tabs
+        handleIntervalChange={handleIntervalChange}
+        tabs={tabs}
+        interval={interval}
+      />
+      <TrendChart aggregatedData={aggregatedData} />
+      
     </div>
   );
 }

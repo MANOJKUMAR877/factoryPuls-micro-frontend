@@ -1,3 +1,5 @@
+// common api file of fetch the data across the apps
+
 import axios from "axios";
 let baseUrl = "http://localhost:3333/";
 
@@ -10,3 +12,4 @@ const fetchAPI = async (type = "events") => {
   }
 };
 export default fetchAPI ;
+

@@ -3,7 +3,7 @@ import React from "react";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-
+// tabs for rendering the interval 
 export default function Tabs({
   handleIntervalChange = () => {},
   tabs = [],
@@ -15,7 +15,6 @@ export default function Tabs({
         <label htmlFor="tabs" className="sr-only">
           Select a tab
         </label>
-        {/* Use an "onChange" listener to redirect the user to the selected tab URL. */}
         <select
           id="tabs"
           name="tabs"

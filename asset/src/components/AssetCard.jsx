@@ -8,8 +8,10 @@ export default function AssetCard({ value = {} }) {
     test_status = "pass",
     creationTime = "12.01.23",
   } = value || {};
+
+  // maping the values from api data
   return (
-    <li className="px-8 py-10 bg-gray-800 cursor-pointer rounded-2xl list-none">
+    <li className="px-8 py-10 list-none bg-gray-800 cursor-pointer rounded-2xl">
       <h3 className="mt-3 mb-3 text-base font-semibold leading-7 tracking-tight text-white">
         {child_type.replaceAll("_", " ")}
       </h3>
