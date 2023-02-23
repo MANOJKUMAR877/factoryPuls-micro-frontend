@@ -49,8 +49,8 @@ module.exports = {
         dashboard: "dashboard@http://localhost:3002/remoteEntry.js",
       },
       exposes: {
-       
-        "./DashboardPage": "./src/pages/DashboardPage.jsx",
+        "./TrendChart": "/src/components/TrendChart.jsx",
+        './Tabs':"/src/components/Tabs.jsx"
       },
       shared: {
         ...deps,

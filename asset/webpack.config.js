@@ -52,6 +52,7 @@ module.exports = {
       exposes: {
         "./AssetCard": "./src/components/AssetCard.jsx",
         "./AssetPage": "./src/pages/AssetPage.jsx",
+        './fetchAPI':'./src/API/fetchAPI.js'
       },
       shared: {
         ...deps,

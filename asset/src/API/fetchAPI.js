@@ -1,7 +1,7 @@
 import axios from "axios";
 let baseUrl = "http://localhost:3333/";
 
-const fetchData = async (type = "events") => {
+const fetchAPI = async (type = "events") => {
   try {
     let data = await axios.get(`${baseUrl}${type}`);
     return data;
@@ -9,4 +9,4 @@ const fetchData = async (type = "events") => {
     return error.response;
   }
 };
-export { fetchData };
+export default fetchAPI ;

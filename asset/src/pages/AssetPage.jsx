@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { fetchData } from "../API/fetchAPI";
+import  fetchAPI  from "../API/fetchAPI";
 import AssetCard from "../components/AssetCard";
 import { Link } from "react-router-dom";
 export default function AssetPage() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetchData().then((res) => setData(res.data));
+    fetchAPI().then((res) => setData(res.data));
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReChartLineChart from "../components/ReChartLineChart";
+import TrendChart from "../components/TrendChart";
 
 import Tabs from "../components/Tabs";
 const data = [
@@ -15,7 +15,7 @@ const data = [
   { date: "2022-10-01", scans: 57 },
   { date: "2022-11-01", scans: 88 },
   { date: "2022-12-01", scans: 120 },
-  // assuming we have data for every month of the year
+ 
 ];
 
 export default function Dashboard() {
@@ -64,11 +64,11 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="flex flex-col justify-center w-screen h-screen space-y-10 align-middle bg-gray-900">
+    <div className="flex flex-col justify-center h-screen bg-gray-900">
        
-      <div className="w-3/2">
+      <div className="">
         <Tabs handleIntervalChange={handleIntervalChange} tabs={tabs} />
-        <ReChartLineChart aggregatedData={aggregatedData} />
+        <TrendChart aggregatedData={aggregatedData} />
       </div>
     </div>
   );

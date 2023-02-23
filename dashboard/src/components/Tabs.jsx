@@ -18,7 +18,7 @@ export default function Tabs({ handleIntervalChange = () => {} ,tabs=[]}) {
           id="tabs"
           name="tabs"
          
-          className="  rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500"
+          className="border-gray-300 rounded-md focus:border-indigo-500 focus:ring-indigo-500"
           defaultValue={tabs.find((tab) => tab.current).name}
         >
           {tabs.map((tab) => (
@@ -28,7 +28,7 @@ export default function Tabs({ handleIntervalChange = () => {} ,tabs=[]}) {
       </div>
       <div className="hidden sm:block">
         <nav
-          className="isolate w-1/2 ml-16 flex divide-x divide-gray-200 rounded-lg shadow"
+          className="flex w-1/2 ml-16 divide-x divide-gray-200 rounded-lg shadow isolate"
           aria-label="Tabs"
         >
           {tabs.map((tab, tabIdx) => (

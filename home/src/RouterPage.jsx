@@ -1,18 +1,16 @@
 import React, { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-const AssetPage = React.lazy(() => import("asset/AssetPage"));
-// import Dashboard from 'dashboard/Dashboard'
-// import Tabs from 'dashboard/Tabs'
-const DashboardPage = React.lazy(() => import("dashboard/DashboardPage"));
+import AssetList from "./pages/AssetList";
+import Dashboard from "./pages/Dashboard";
 export default function ReactRouting() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <AssetPage />,
+      element: <AssetList />,
     },
     {
       path: "/dashboard",
-      element: <DashboardPage />,
+      element: <Dashboard />,
     },
   ]);
   return (
