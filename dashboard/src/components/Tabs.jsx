@@ -6,7 +6,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Tabs({ handleIntervalChange = () => {} ,tabs=[]}) {
+export default function Tabs({ handleIntervalChange = () => {} ,tabs=[],interval=''}) {
   return (
     <div>
       <div className="sm:hidden">
@@ -49,7 +49,7 @@ export default function Tabs({ handleIntervalChange = () => {} ,tabs=[]}) {
               <span
                 aria-hidden="true"
                 className={classNames(
-                  tab.current ? "bg-indigo-500" : "bg-transparent",
+                  tab.name === interval ? "bg-indigo-500" : "bg-transparent",
                   "absolute inset-x-0 bottom-0 h-0.5"
                 )}
               />

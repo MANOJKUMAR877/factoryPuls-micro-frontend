@@ -15,7 +15,6 @@ const data = [
   { date: "2022-10-01", scans: 57 },
   { date: "2022-11-01", scans: 88 },
   { date: "2022-12-01", scans: 120 },
- 
 ];
 
 export default function Dashboard() {
@@ -23,13 +22,14 @@ export default function Dashboard() {
     { name: "1 year", current: true },
     { name: "6 months", current: false },
     { name: "3 months", current: false },
-    { name: "1 month", current: false },
+   
   ];
 
   const [interval, setInterval] = useState("1 year");
   const [aggregatedData, setAggregatedData] = useState(data);
 
   const handleIntervalChange = (newInterval) => {
+    setInterval(newInterval);
     if (newInterval === "1 year") {
       setAggregatedData(data);
     } else if (newInterval === "1 month") {
@@ -65,9 +65,12 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col justify-center h-screen bg-gray-900">
-       
       <div className="">
-        <Tabs handleIntervalChange={handleIntervalChange} tabs={tabs} />
+        <Tabs
+          handleIntervalChange={handleIntervalChange}
+          tabs={tabs}
+          interval={interval}
+        />
         <TrendChart aggregatedData={aggregatedData} />
       </div>
     </div>

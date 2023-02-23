@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import  fetchAPI  from "../API/fetchAPI";
+import fetchAPI from "../API/fetchAPI";
 import AssetCard from "../components/AssetCard";
-import { Link } from "react-router-dom";
 export default function AssetPage() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -15,20 +14,16 @@ export default function AssetPage() {
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Asset
           </h2>
-          <p className="mt-4 text-lg leading-8 text-gray-400">
-            Click the Asset to look their data
-          </p>
+         
         </div>
         <ul
           role="list"
           className="grid max-w-2xl grid-cols-1 gap-6 mx-auto mt-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
         >
           {data.map((value, index) => (
-            <Link to={"/dashboard"} key={index}>
-              <div key={index}>
-                <AssetCard value={value} />
-              </div>
-            </Link>
+            <div key={index}>
+              <AssetCard value={value} />
+            </div>
           ))}
         </ul>
       </div>
