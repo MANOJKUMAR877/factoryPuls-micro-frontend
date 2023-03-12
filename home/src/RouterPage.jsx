@@ -9,7 +9,7 @@ export default function ReactRouting() {
       element: <AssetList />,
     },
     {
-      path: "/dashboard",
+      path: "/dashboard/:id",
       element: <Dashboard />,
     },
   ]);

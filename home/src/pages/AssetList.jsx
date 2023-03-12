@@ -34,7 +34,7 @@ export default function AssetList() {
             className="grid max-w-2xl grid-cols-1 gap-6 mx-auto mt-20 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8"
           >
             {data.map((value, index) => (
-              <Link to={"/dashboard"} key={index}>
+              <Link to={`/dashboard/${value.id}`} key={index}>
                 <div key={index}>
                   <AssetCard value={value} />
                 </div>
